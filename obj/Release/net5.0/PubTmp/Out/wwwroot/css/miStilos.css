@@ -1,0 +1,267 @@
+﻿
+:root {
+    --color-text: hsl(200,86%,11%);
+    --color-base: hsl(240,23%,20%);
+    --color-dest: hsl(30,100%,50%);
+    --color-text-dest: hsl(30,97%,50%);
+    --color-backg: hsl(240,11%,22%);
+    --color-base-bright: hsl(181,100%,37%);
+}
+
+.container-fluid {
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+}
+
+/*-------------------GENERAL-----------------*/
+
+body {
+    font-family: 'Raleway', sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 26px;
+    color: var(--color-text);
+    background-image: url('../img/pexels-markus-spiske-131773.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: hsl(305,5%,91%);
+}
+
+.colorbase {
+    background-color: var(--color-base);
+}
+
+.reset_enlace {
+    text-decoration: none;
+}
+
+.contenidoBox {
+    max-width: 57.29vw;
+    width: 57.29vw;
+}
+
+.navbar-light .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.container.cuerpo {
+    max-width: 57.29vw;
+    width: 57.29vw;
+    height: auto;
+    margin: 0 auto;
+    padding-left: 2.60vw;
+    padding-right: 2.60vw;
+    padding-top: 1.30vw;
+    padding-bottom: 1.30vw;
+}
+
+.destacado {
+    font-weight: 800;
+}
+
+.dest-color {
+    font-weight: 800;
+    color: var(--color-text-dest);
+}
+
+.tit {
+    font-weight: 800;
+    line-height: 98px;
+}
+
+h2.tit {
+    font-size: 1.5rem;
+    flex-basis: 65%;
+    line-height:1.5rem;
+}
+h3.tit, h4.tit {
+    line-height: 1.5rem;
+}
+
+.row {
+    margin-left:0rem;
+    margin-right: 0rem;
+}
+
+.box {
+    background-color: hsla(240,11%,22%,.2);
+}
+
+.box-lighter {
+    background-color: hsla(240,11%,22%,.10);
+}
+.box-alert {
+    background-color: hsla(47,97%,60%,.7);
+    padding: 1rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.box70 {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.negrita {
+    font-weight: 700;
+}
+/*Tarjeta*/
+.tarjeta {
+    min-width: 9.11vw;
+    box-sizing: border-box;
+}
+
+.imgTarjeta {
+    padding: 5% 5% 10% 5%;
+}
+
+.imgTarjeta img {
+    width: 80%;
+    height: 80%;
+    display: block;
+    margin: 0 auto;
+}
+
+.etiqueta {
+    background-color: var(--color-base-bright);
+    width: 100%;
+}
+
+.etiqueta:hover {
+    background-color: var(--color-dest);
+    box-shadow: rgba(0,0,0,0.3) 2px 2px 5px inset;
+}
+
+.etiquetaLink {
+    font-weight: 200;
+    font-size: 1.2rem;
+}
+
+.etiquetaLink:hover {
+    text-decoration: none;
+}
+/*Tabla*/
+.tableHead {
+    background-color: var(--color-dest);
+}
+
+.epigrafeTabla {
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+.table td, .table th {
+    padding: 1.4rem .75rem;
+}
+
+.table td {
+    border-top: 1px solid hsla(240,11%,22%,.5);
+}
+
+.table thead th {
+    border-bottom: none;
+}
+
+.epigrafeTabla.tdNarrow {
+    padding: 0.75rem;
+    border-top: none;
+}
+
+td.tdNarrow {
+    padding: 0.75rem;
+}
+/*Botones*/
+.boton {
+    display: inline-block;
+    background-color: var(--color-base);
+    color: white;
+    padding: 0.2rem 1rem;
+    margin-left: 0.3rem;
+    font-size: 0.75rem;
+    font-weight: 400;
+}
+
+.boton:hover {
+    background-color: var(--color-dest);
+    color: var(--color-base);
+    box-shadow: hsla(240,11%,22%,.4) 2px 2px 5px inset;
+    text-decoration: none;
+    color: var(--color-base);
+}
+
+.btnVolver, .botonNew {
+    /*background-color: hsla(181,100%,37%,.5);*/
+    padding: 0.5rem 1.5rem;
+    color: var(--color-base);
+    font-size: 0.9rem;
+    font-weight: 200;
+    align-self: center;
+    line-height: 1.1rem;
+}
+
+.btnVolver:hover , .botonNew:hover{
+    background-color: hsl(181, 100%, 37% ,.3);
+    text-decoration: none;
+    color: var(--color-text);
+}
+
+.iconoVolver {
+    width: 1.8rem;
+}
+
+.icono {
+    font-weight: 600;
+    font-size: 3.5rem;
+}
+
+.btn.boton {
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 200;
+    border-radius: 0px;
+    width: 100%;
+    margin-left: 0rem;
+}
+
+/*.btnCentro50 {
+    width:45%;
+    margin: 0 auto;
+}*/
+
+.form-control {
+    color: var(--color-text);
+    background-color: hsla(240,100%,100%,.4);
+    border: 1px solid hsl(240,11%,84%);
+    border-radius: 0rem;
+}
+
+.control-label {
+    font-weight: 700;
+}
+
+
+
+/*------------------- MENU-----------------*/
+/*.miheader {
+    color: white;
+}*/
+.enlace_menu {
+    color: white;
+    font-weight: 200;
+}
+
+    .enlace_menu:hover {
+        color: var(--color-dest);
+        border-top: 1px solid var(--color-dest);
+    }
+
+/*-------------------CONTENIDO-----------------*/
+
+
+
+/*-------------------FOOTER-----------------*/
+footer {
+    font-weight: 200;
+    font-size: 0.85rem;
+}

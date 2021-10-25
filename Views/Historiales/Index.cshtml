@@ -1,0 +1,75 @@
+﻿@model IEnumerable<WebFormacion.Models.Historial>
+
+@{
+    ViewData["Title"] = "Historial de Contactos";
+}
+
+<h2 class="tit text-center mt-3 mb-3 mt-sm-3 mb-sm-3">Historial de Contactos</h2>
+
+<div class="d-flex flex-row justify-content-end mt-5 mb-3">
+    <a asp-action="Create" class="btnVolver d-flex flex-row justify-content-center flex-wrap">
+        <div class="icono">+</div>
+        <div class="ml-1 text-center"><span class="text-uppercase">NUEVO</span> Contacto</div>
+    </a>
+</div>
+
+<table class="table text-center mb-5">
+    <thead class="tableHead p-2">
+        <tr>
+            <th class="epigrafeTabla">
+                @Html.DisplayNameFor(model => model.HistorialID)
+            </th>
+            <th class="epigrafeTabla">
+                @Html.DisplayNameFor(model => model.Alumno)
+            </th>
+            <th class="epigrafeTabla">
+                @Html.DisplayNameFor(model => model.Contacto)
+            </th>
+            <th class="epigrafeTabla">
+                @Html.DisplayNameFor(model => model.Curso)
+            </th>
+            <th class="epigrafeTabla">
+                @Html.DisplayNameFor(model => model.Fecha)
+            </th>
+            <th class="epigrafeTabla">
+                @Html.DisplayNameFor(model => model.Medio)
+            </th>
+            <th class="epigrafeTabla">
+                @Html.DisplayNameFor(model => model.Mensaje)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody class="box-lighter">
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.HistorialID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Alumno.AlumnoID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Contacto.ContactoID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Curso.NombreCurso)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fecha)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Medio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Mensaje)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.HistorialID" class="boton m-1">Modificar</a>
+                <a asp-action="Details" asp-route-id="@item.HistorialID" class="boton m-1">Ver</a> 
+                <a asp-action="Delete" asp-route-id="@item.HistorialID" class="boton m-1">Eliminar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

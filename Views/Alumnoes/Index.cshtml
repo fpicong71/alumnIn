@@ -1,0 +1,69 @@
+﻿@model IEnumerable<WebFormacion.Models.Alumno>
+
+@{
+    ViewData["Title"] = "Lista de Alumnos";
+}
+
+<h2 class="tit text-center mt-3 mb-3 mt-sm-3 mb-sm-3">Lista de Alumnos</h2>
+
+<div class="d-flex flex-row justify-content-end mt-5 mb-3">
+    <a asp-action="Create" class="btnVolver d-flex flex-row justify-content-center flex-wrap">
+        <div class="icono">+</div>
+        <div class="ml-1 text-center"><span class="text-uppercase">NUEVO</span> Alumno</div>
+    </a>
+</div>
+
+<table class="table text-center mb-5">
+    <thead class="tableHead p-2">
+        <tr>
+            <th class="epigrafeTabla">
+                @Html.DisplayNameFor(model => model.AlumnoID)
+            </th>
+            <th class="epigrafeTabla">
+                @Html.DisplayNameFor(model => model.Nombre)
+            </th>
+            <th class="epigrafeTabla">
+                @Html.DisplayNameFor(model => model.Apellido1)
+            </th>
+            <th class="epigrafeTabla">
+                @Html.DisplayNameFor(model => model.Apellido2)
+            </th>
+            <th class="epigrafeTabla">
+                @Html.DisplayNameFor(model => model.Telefono)
+            </th>
+            <th class="epigrafeTabla">
+                @Html.DisplayNameFor(model => model.Direccion)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody class="box-lighter">
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.AlumnoID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Apellido1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Apellido2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Telefono)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Direccion)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.AlumnoID" class="boton m-1">Modificar</a>
+                <a asp-action="Details" asp-route-id="@item.AlumnoID" class="boton m-1">Ver</a>
+                <a asp-action="Delete" asp-route-id="@item.AlumnoID" class="boton m-1">Eliminar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

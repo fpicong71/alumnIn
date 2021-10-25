@@ -1,0 +1,93 @@
+﻿@model WebFormacion.Models.Alumno
+
+@{
+    ViewData["Title"] = "Ver Detalles Alumno";
+}
+
+<h2 class="tit text-center">Ver Detalles del Alumno</h2>
+
+<div class="d-flex flex-row justify-content-end mt-5">
+    <a asp-action="Index" class="btnVolver d-flex flex-row justify-content-center flex-wrap">
+        <img src="~/img/volver_listado.png" alt="Volver al Listado" class="iconoVolver text-center" />
+        <span class="align-self-center text-center">Volver al Listado</span>
+    </a>
+</div>
+
+<div class="mt-3">
+    <h3 class="tit mt-3 tableHead p-2"> @Html.DisplayFor(model => model.Nombre) @Html.DisplayFor(model => model.Apellido1) @Html.DisplayFor(model => model.Apellido2) </h3>
+
+    <div class="row box-lighter mt-0 p-3">
+        <table>
+            <tr>
+                <th class="negrita pr-5">@Html.DisplayNameFor(model => model.AlumnoID) </th>
+                <td class="pl-5"> @Html.DisplayFor(model => model.AlumnoID)</td>
+            </tr>
+            <tr>
+                <th class="negrita pr-5">@Html.DisplayNameFor(model => model.Nombre) </th>
+                <td class="pl-5"> @Html.DisplayFor(model => model.Nombre)</td>
+            </tr>
+            <tr>
+                <th class="negrita pr-5"> @Html.DisplayNameFor(model => model.Apellido1) </th>
+                <td class="pl-5"> @Html.DisplayFor(model => model.Apellido1)</td>
+            </tr>
+            <tr>
+                <th class="negrita pr-5"> @Html.DisplayNameFor(model => model.Apellido2) </th>
+                <td class="pl-5"> @Html.DisplayFor(model => model.Apellido2)</td>
+            </tr>
+            <tr>
+                <th class="negrita pr-5">  @Html.DisplayNameFor(model => model.Telefono) </th>
+                <td class="pl-5"> @Html.DisplayFor(model => model.Telefono)</td>
+            </tr>
+            <tr>
+                <th class="negrita pr-5">  @Html.DisplayNameFor(model => model.Direccion) </th>
+                <td class="pl-5"> @Html.DisplayFor(model => model.Direccion)</td>
+            </tr>
+            <tr>
+                <th class="negrita pr-5">  @Html.DisplayNameFor(model => model.CodigoPostal) </th>
+                <td class="pl-5"> @Html.DisplayFor(model => model.CodigoPostal)</td>
+            </tr>
+        </table>
+    </div>
+
+    @*<dl class="row box-lighter mt-0 p-3">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.AlumnoID)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.AlumnoID)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Nombre)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Nombre)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Apellido1)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Apellido1)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Apellido2)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Apellido2)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Telefono)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Telefono)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Direccion)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Direccion)
+            </dd>
+        </dl>*@
+</div>
+<div class="mb-5">
+    <a asp-action="Edit" asp-route-id="@Model.AlumnoID" class="btn boton">Modificar Alumno</a>
+</div>

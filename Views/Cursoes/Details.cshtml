@@ -1,0 +1,91 @@
+﻿@model WebFormacion.Models.Curso
+
+@{
+    ViewData["Title"] = "Ver Curso";
+}
+
+<h2 class="tit text-center">Detalles Curso</h2>
+
+<div class="d-flex flex-row justify-content-end mt-5">
+    <a asp-action="Index" class="btnVolver d-flex flex-row justify-content-center flex-wrap">
+        <img src="~/img/volver_listado.png" alt="Volver al Listado" class="iconoVolver text-center" />
+        <span class="align-self-center text-center">Volver al Listado</span>
+    </a>
+</div>
+
+<div class="mt-3">
+    <h3 class="tit mt-3 tableHead p-2">@Html.DisplayFor(model => model.NombreCurso) </h3>
+
+
+    <div class="row box-lighter mt-0 p-3">
+        <table>
+            <tr>
+                <th class="negrita pr-5">@Html.DisplayNameFor(model => model.CursoID) </th>
+                <td class="pl-5"> @Html.DisplayFor(model => model.CursoID)</td>
+            </tr>
+            <tr>
+                <th class="negrita pr-5">@Html.DisplayNameFor(model => model.NombreCurso) </th>
+                <td class="pl-5"> @Html.DisplayFor(model => model.NombreCurso)</td>
+            </tr>
+            <tr>
+                <th class="negrita pr-5"> @Html.DisplayNameFor(model => model.DescripcionCurso) </th>
+                <td class="pl-5">  @Html.DisplayFor(model => model.DescripcionCurso)</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class=" row mt-5 mb-5">
+        <table class="table">
+            <thead class="tableHead">
+                <tr>
+                    <td colspan="2" class="pt-0 pb-0">
+                        <h4 class="negrita">  Entidad@*@Html.DisplayNameFor(model => model.CursoEntidades)*@ </h4>
+                    </td>
+                </tr>
+            </thead>
+            <tr class="box ">
+                <th class="epigrafeTabla tdNarrow">Razón Social</th>
+            </tr>
+            <tbody class="box-lighter">
+                @foreach (var item in Model.CursoEntidades)
+                {
+                    <tr>
+                        <td class="tdNarrow">
+                            @Html.DisplayFor(modelItem => item.Entidad.RazonSocial)
+                        </td>
+                    </tr>
+                }
+            </tbody>
+
+        </table>
+
+    </div>
+</div>
+
+    @*<div class="mt-3">
+        <h4>Curso</h4>
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.CursoID)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.CursoID)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.NombreCurso)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.NombreCurso)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.DescripcionCurso)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.DescripcionCurso)
+            </dd>
+        </dl>
+    </div>*@
+    <div class="mb-5">
+        <a asp-action="Edit" asp-route-id="@Model.CursoID" class="btn boton">Modificar</a> 
+    </div>

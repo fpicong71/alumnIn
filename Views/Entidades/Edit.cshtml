@@ -1,0 +1,62 @@
+﻿@model WebFormacion.Models.Entidad
+
+@{
+    ViewData["Title"] = "Modificar Entidad de Formación";
+}
+
+<h2 class="tit text-center mt-md5 mt-2 mb-5">Modificar Entidad de Formación</h2>
+
+<div class="mt-5 d-flex flex-row justify-content-end">
+    <a asp-action="Index" class="btnVolver d-flex flex-row justify-content-center flex-wrap">
+        <img src="~/img/volver_listado.png" alt="Volver al Listado" class="iconoVolver text-center" />
+        <span class="align-self-center text-center">Volver al Listado</span>
+    </a>
+</div>
+
+<div class="row box-lighter mt-3 mb-5 p-lg-5 p-md-2 pt-5 pb-5 pl-1 pr-1">
+    <div class="col-sm-6 col-12 ml-auto mr-auto">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="EntidadID" />
+            <div class="form-group">
+                <label asp-for="EntidadID" class="control-label negrita" ></label>
+                <input asp-for="EntidadID" class="form-control" />
+                <span asp-validation-for="EntidadID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RazonSocial" class="control-label negrita"></label>
+                <input asp-for="RazonSocial" class="form-control" />
+                <span asp-validation-for="RazonSocial" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Direccion" class="control-label negrita"></label>
+                <input asp-for="Direccion" class="form-control" />
+                <span asp-validation-for="Direccion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CodigoPostal" class="control-label negrita"></label>
+                <input asp-for="CodigoPostal" class="form-control" />
+                <span asp-validation-for="CodigoPostal" class="text-danger"></span>
+            </div>
+            <div class="form-group mt-5">
+                <input type="submit" value="Guardar Cambios" class="btn boton" />
+            </div>
+        </form>
+    </div>
+</div>
+
+@*<div class="mt-5 mb-5 d-flex flex-row justify-content-end">
+        <a asp-action="Index" class="btnVolver d-flex flex-row justify-content-end flex-wrap">
+            <div class="align-self-center ml-auto mr-auto">
+                <img src="~/img/volver_listado.png" alt="Volver al Listado" class="iconoVolver"/>
+            </div>
+            <div class="align-self-center text-center ml-2">Volver al Listado</div>
+        </a>
+ </div>*@
+
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

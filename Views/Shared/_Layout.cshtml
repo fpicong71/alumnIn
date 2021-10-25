@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - AlumnIN - Aplicación para la captación de alumnos</title>
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+
+    <!--Mis Estilos-->
+    <link href="~/css/meyeReset.css" rel="stylesheet" />
+    <link href="~/css/miStilos.css" rel="stylesheet" />
+
+    <!--Fuentes-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+    <div class="container-fluid">
+        <header>
+            <div class="colorbase .contenidoBox">
+                <nav class="navbar navbar-expand-sm navbar-toggleable-sm border-bottom  mb-3 ">
+                    <div class="container">
+                        <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+                            <img src="~/img/imagotipo.png" alt="Imagotipo AlumnIN" />
+                        </a>
+                        <button class="navbar-toggler navbar-light" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon text-white"></span>
+                        </button>
+                        <div class="navbar-collapse collapse  d-sm-inline-flex justify-content-between mt-5">
+                            <ul class="navbar-nav d-sm-inline-flex justify-content-end flex-grow-1">
+                                <li class="nav-item">
+                                    <a class="nav-link enlace_menu ml-5 pt-2 pb-0 pr-0 pl-0" asp-area="" asp-controller="Entidades" asp-action="Index">Entidades</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link enlace_menu ml-5 pt-2 pb-0 pr-0 pl-0" asp-area="" asp-controller="Cursoes" asp-action="Index">Cursos</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link enlace_menu ml-5 pt-2 pb-0 pr-0 pl-0" asp-area="" asp-controller="Contactoes" asp-action="Index">Contactos</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link enlace_menu ml-5 pt-2 pb-0 pr-0 pl-0" asp-area="" asp-controller="Alumnoes" asp-action="Index">Alumnos</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link enlace_menu ml-5 pt-2 pb-0 pr-0 pl-0" asp-area="" asp-controller="Historiales" asp-action="Index">Historial</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            
+        </header>
+        <div class="container cuerpo mt-5 mb-5">
+            <main role="main">
+                @RenderBody()
+            </main>
+        </div>
+
+        <footer class="border-top footer colorbase text-center text-white mt-5">
+            <div class="container">
+                <span class="small">&copy;</span>  2021 - AlumnIN - <a asp-area="" asp-controller="Home" asp-action="Privacy" class="reset_enlace text-white">Privacidad</a>
+            </div>
+        </footer>
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+        @await RenderSectionAsync("Scripts", required: false)
+    </div>
+
+</body>
+</html>

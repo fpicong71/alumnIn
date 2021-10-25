@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\inetpub\wwwroot\AlumnIN</_PublishTargetUrl>
+    <History>True|2021-05-06T01:24:24.8427154Z;False|2021-05-06T03:22:04.6895842+02:00;False|2021-05-06T03:17:14.0071140+02:00;</History>
+  </PropertyGroup>
+</Project>
